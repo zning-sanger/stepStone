@@ -25,7 +25,8 @@ Commands:                                               \
 -- align		Align reads to a reference      \
 
 ===Detect breakpoints with aligned, and name sorted sam,bam or cram files:     \
-	Usage: ./stepStone breakpoint -nodes 60 -data ccs/ont/ont-NLR/ngs-HiC/ngs-10X/ngs-SSR \ 
+
+           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60 -data ccs/ont/ont-NLR/ngs-HiC/ngs-10X/ngs-SSR  \
 		-bam /myspace/desk/test-sorted.bam <output_breakpoints.vcf>    \
 		--- Note: the sam/bam/cram file has to be Name sorted! ---     \
 		--- If not read name sorted, please do the following:  ---     \
@@ -51,5 +52,5 @@ Commands:                                               \
 		-data     ngs-SSR - Standard short reads such as Illumina data \
 
 
-           $ /full/path/to/steppingStone/src/steppingStone -nodes <nodes>  \
+           $ /full/path/to/stepStone/src/stepStone -nodes <nodes>  \
 
