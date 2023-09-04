@@ -32,17 +32,20 @@ Commands:                                               \
 		--- If not read name sorted, please do the following:  ---     \
 		--- samtools sort -@ 60 -n your.bam new.bam ---                \
 
-===Detect breakpoints with fasta/fastq long read files:                        \
-	Usage: ./stepStone breakpoint -nodes 60 -data ccs/ont -reads input_long.fasta/q <Input_Reference> <breakpoints.vcf>                                                    \
+===Detect breakpoints with fasta/fastq long read files:                        \ 
 
-===Plot depth of coverage for all data types:                                  \
-	Usage: ./stepStone plot -nodes 60 -bam /myspace/desk/test-sorted.bam -sample cancer \
+           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60 -data ccs/ont -reads input_long.fasta/q <Input_Reference> <breakpoints.vcf>                            \
 
-===Align reads to a reference for all data types:                                           \
-	Usage: ./stepStone align -nodes 60 -data ccs/ont/ont-NLR -reads input_long.fasta/q <Input_Reference> <Output_sorted_bam>                                               \
-	Usage: ./stepStone align -nodes 60 -data ngs-HiC -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                                             \
-	Usage: ./stepStone align -nodes 60 -data ngs-10X -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                                             \
-	Usage: ./stepStone align -nodes 60 -data ngs-SSR -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                                             \
+===Plot depth of coverage for all data types:                                  \ 
+
+           $ /full/path/to/stepStone/src/stepStone plot -bam /myspace/desk/test-sorted.bam -sample cancer                        \
+
+===Align reads to a reference for all data types:                              \
+
+           $ /full/path/to/stepStone/src/stepStone align -data ccs/ont/ont-NLR -reads input_long.fasta/q <Input_Reference> <Output_sorted_bam>                                \
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-HiC -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-10X -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-SSR -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
       	 	-nodes    60      - Number of CPUs requested                   \
       		-data     ccs     - PacBio Hifi                                \
 		-data     ont     - Oxford Nanopore Q20 or Q30                 \
