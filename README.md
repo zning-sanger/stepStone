@@ -46,12 +46,12 @@ Commands:                                               \
            $ /full/path/to/stepStone/src/stepStone align -data ngs-HiC -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
            $ /full/path/to/stepStone/src/stepStone align -data ngs-10X -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
            $ /full/path/to/stepStone/src/stepStone align -data ngs-SSR -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
-      	 	-nodes    60      - Number of CPUs requested                   \
-      		-data     ccs     - PacBio Hifi                                \
+		-nodes     60     - Number of CPUs requested                 \
+		-data     ccs     - PacBio Hifi                 \
 		-data     ont     - Oxford Nanopore Q20 or Q30                 \
 		-data     ont-NLR - Oxford Nanopore normal long reads (NLR)    \
 		-data     ngs-HiC - Hi-C reads                                 \
-      		-data     ngs-10X - 10X reads                                  \
+		-data     ngs-10X - 10X reads                                 \
 		-data     ngs-SSR - Standard short reads such as Illumina data \
 
 
