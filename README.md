@@ -3,21 +3,21 @@ A pipeline for identification of chromothripsis breakpoints and cancer rearrange
 
 ### Download and Compile:
 
-    $ git clone  https://github.com/wtsi-hpag/steppingStone.git 
-    $ cd steppingStone 
+    $ git clone  https://github.com/wtsi-hpag/stepStone.git 
+    $ cd stepStone 
     $ bash install.sh
 		
 If everything compiled successfully you must see the final comment: 
 		"Congrats: installation successful!"		
 
 #### External packages
-The genome aligner BWA (http://bio-bwa.sourceforge.net) and SMALT (http://www.sanger.ac.uk/science/tools/smalt-0) are downloaded and compiled by steppingStone.
+The genome aligner BWA-mem2 (https://github.com/bwa-mem2/bwa-mem2), minimap2 (https://github.com/lh3/minimap2) and samtools (http://www.htslib.org) are downloaded and compiled by stepStone.
 
 ### Run the pipelines
 Program: stepStone - a pipeline to identify chromothripsis breakpoints and rearrangements
 Version: 2.0
 
-Usage: ./stepStone <command> [options]
+Usage: ./stepStone command [options]			\
 
 Commands:                                               \
 -- breakpoints		Detect breakpoints              \
@@ -40,7 +40,7 @@ Commands:                                               \
 
 ===Plot depth of coverage for all data types:                                  		\ 
 
-           $ /full/path/to/stepStone/src/stepStone plot -bam /myspace/desk/test-sorted.bam -sample cancer                        \
+           $ /full/path/to/stepStone/src/stepStone plot -bam /myspace/test-sorted.bam -sample cancer \
 
 ===Align reads to a reference for all data types:                              			\
 
