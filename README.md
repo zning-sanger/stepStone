@@ -26,7 +26,8 @@ Commands:                                               \
 
 ===Detect breakpoints with aligned, and name sorted sam,bam or cram files:     \
 
-           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60 -data ccs/ont/ont-NLR/ngs-HiC/ngs-10X/ngs-SSR  \
+           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60        \
+		-data ccs/ont/ont-NLR/ngs-HiC/ngs-10X/ngs-SSR                  \
 		-bam /myspace/desk/test-sorted.bam <output_breakpoints.vcf>    \
 		--- Note: the sam/bam/cram file has to be Name sorted! ---     \
 		--- If not read name sorted, please do the following:  ---     \
@@ -34,7 +35,8 @@ Commands:                                               \
 
 ===Detect breakpoints with fasta/fastq long read files:                        \ 
 
-           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60 -data ccs/ont -reads input_long.fasta/q <Input_Reference> <breakpoints.vcf>                            \
+           $ /full/path/to/stepStone/src/stepStone breakpoint -nodes 60 -data ccs/ont \
+		-reads input_long.fasta/q <Input_Reference> <breakpoints.vcf>  \
 
 ===Plot depth of coverage for all data types:                                  \ 
 
@@ -42,10 +44,14 @@ Commands:                                               \
 
 ===Align reads to a reference for all data types:                              \
 
-           $ /full/path/to/stepStone/src/stepStone align -data ccs/ont/ont-NLR -reads input_long.fasta/q <Input_Reference> <Output_sorted_bam>                                \
-           $ /full/path/to/stepStone/src/stepStone align -data ngs-HiC -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
-           $ /full/path/to/stepStone/src/stepStone align -data ngs-10X -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
-           $ /full/path/to/stepStone/src/stepStone align -data ngs-SSR -fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>                              \
+           $ /full/path/to/stepStone/src/stepStone align -data ccs/ont/ont-NLR \
+		-reads input_long.fasta/q <Input_Reference> <Output_sorted_bam>\
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-HiC         \
+		-fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>  \
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-10X                     \
+		-fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>  \
+           $ /full/path/to/stepStone/src/stepStone align -data ngs-SSR                     \
+		-fq1 read_1.fq.gz -fg2 read_2.fq.gz <Input_Reference> <Output_sorted_bam>  \
 		-nodes     60     - Number of CPUs requested                 \
 		-data     ccs     - PacBio Hifi                 \
 		-data     ont     - Oxford Nanopore Q20 or Q30                 \
